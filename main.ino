@@ -31,7 +31,7 @@ void loop() {
 
   if (digitalRead(pin2) == LOW)                     
   {         
-    Keyboard.write(KEY_TAB);
+    Keyboard.write(KEY_TAB);            //This is for simulating a button press
     Keyboard.write(KEY_ENTER);        
     delay(500);
   }
