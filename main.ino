@@ -25,16 +25,14 @@ void loop() {
 
   if (digitalRead(pin1) == LOW)                     
   {
-    Keyboard.print("Let me know if there's anything else I can help with.");                            //Zendesk sign off (not actually an invite)
+    Keyboard.print("This is the format for send text");                            
     delay(500);
   }
 
   if (digitalRead(pin2) == LOW)                     
-  {
-    Keyboard.print("Accounts");                     //Because of the 30 odd tickets I do a day somehow I manage to type this for every one of them.
+  {         
     Keyboard.write(KEY_TAB);
-    Keyboard.write(KEY_TAB);
-    Keyboard.print("Payable");         
+    Keyboard.write(KEY_ENTER);        
     delay(500);
   }
 
