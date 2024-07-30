@@ -23,63 +23,43 @@ pinMode(pin8, INPUT_PULLUP);
 
 void loop() {
 
-  if (digitalRead(pin1) == LOW)                     
+  if (digitalRead(pin1) == LOW)                      //Checking if the first switch has been pressed  
   {
-    Keyboard.print("Let me know if there's anything else I can help with.");                            
-    delay(100);
+    Keyboard.print("Text in between these quotation marks will be written out");
+    //This is an example of how to write text with the macropad
   }
 
-  if (digitalRead(pin2) == LOW)                     
-  {
-    Keyboard.print("Accounts");                     
-    Keyboard.write(KEY_TAB);
-    Keyboard.write(KEY_TAB);
-    Keyboard.print("Payable");         
-    delay(100);
-  }
-
-  if (digitalRead(pin3) == LOW)                     //Checking if the third switch has been pressed
-  {
-    Keyboard.print("PO: ");
+  if (digitalRead(pin2) == LOW)                       //Checking if the second switch has been pressed
+  {                     
+    Keyboard.write(KEY_TAB); 
     Keyboard.press(KEY_LEFT_CTRL);
     Keyboard.print("v");
+    Keyboard.write(KEY_TAB);
     Keyboard.releaseAll();
-    Keyboard.write(KEY_RETURN);
-    Keyboard.print("Order #: ");
-    delay(100);
+    //This is an example of how to simulate keypresses that aren't characters, this will simulate pressing TAB, pasting whatever is on the clipboard and then pressing tab again
   }
 
-  if (digitalRead(pin4) == LOW)                     //Checking if the fourth switch has been pressed
-  { 
-    Keyboard.print("Once it has been packed and handed over to the courier you will receive tracking info that you can use to keep an eye on your package.");
-  }
+  //if (digitalRead(pin3) == LOW)                     //Checking if the third switch has been pressed
+  //{
+  //}
 
-  if (digitalRead(pin5) == LOW)                     //Checking if the fifth switch has been pressed
-  { 
-    Keyboard.print("Hi {{ticket.requester.first_name}}, ");
-    Keyboard.write(KEY_RETURN);
-    Keyboard.write(KEY_RETURN);
-    Keyboard.releaseAll();
-    Keyboard.print("Thanks for getting in touch, ");
-  }
+  //if (digitalRead(pin4) == LOW)                     //Checking if the fourth switch has been pressed
+  //{ 
+  //}
 
-  if (digitalRead(pin6) == LOW)                     //Checking if the sixth switch has been pressed
-  { 
-    Keyboard.print("/catalog/product/view/sku/");
-    Keyboard.press(KEY_LEFT_CTRL);
-    Keyboard.print("v");
-    Keyboard.releaseAll();
-  }
+  //if (digitalRead(pin5) == LOW)                     //Checking if the fifth switch has been pressed
+  //{ 
+  //}
 
-  if (digitalRead(pin7) == LOW)                     //Checking if the seventh switch has been pressed
-  {
-    Keyboard.print("Was there anything else I can look into with you?");                            
-    delay(500);
-  }
+  //if (digitalRead(pin6) == LOW)                     //Checking if the sixth switch has been pressed
+  //{ 
+  //}
 
-  if (digitalRead(pin8) == LOW)                     //Checking if the eigth switch has been pressed
-  {
-    Keyboard.print("One moment I'll have a quick look for you");                            
-    delay(500);
-  }
+  //if (digitalRead(pin7) == LOW)                     //Checking if the seventh switch has been pressed
+  //{
+  //}
+
+  //if (digitalRead(pin8) == LOW)                     //Checking if the eigth switch has been pressed
+  //{
+  //}
 }
