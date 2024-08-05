@@ -7,6 +7,7 @@ https://github.com/earlephilhower/arduino-pico/releases/download/global/package_
 ![image](https://github.com/Drath1995/Pi-Pico-Makerverse-MacroPad/assets/49476908/017367eb-2cc9-4e83-8b43-0ce845d7af99)
 
 Once you've added the above section to your additional boards manager, you will need to install it to your IDE, going to Tools > Boards > Boards Manager and searching "2040", you will then need to hit install on the below highlighted result.
+
 ![image](https://github.com/user-attachments/assets/5b633b21-bb8b-4e03-ae45-a46cefcae37c)
 
 Now that the board is set up and ready to go you will be able to select it from the board manager.
