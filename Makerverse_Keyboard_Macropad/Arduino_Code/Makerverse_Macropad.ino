@@ -42,7 +42,7 @@ void loop() {
   {
     Keyboard.press(KEY_LEFT_CTRL);
     Keyboard.print("a");
-     Keyboard.press(KEY_LEFT_CTRL);
+    Keyboard.press(KEY_LEFT_CTRL);
     Keyboard.print("c");
     Keyboard.releaseAll();
     delay(100);
