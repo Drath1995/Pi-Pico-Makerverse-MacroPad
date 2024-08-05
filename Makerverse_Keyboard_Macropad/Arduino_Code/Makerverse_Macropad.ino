@@ -23,63 +23,53 @@ pinMode(pin8, INPUT_PULLUP);
 
 void loop() {
 
-  if (digitalRead(pin1) == LOW)                     
+  if (digitalRead(pin1) == LOW)                   //Example of how to alphanumeric print text with a button press                 
   {
-    Keyboard.print("Let me know if there's anything else I can help with.");                            
+    Keyboard.print("rainbow:wave2: Buying GF 10K");                            
     delay(100);
   }
 
-  if (digitalRead(pin2) == LOW)                     
-  {
-    Keyboard.print("Accounts");                     
-    Keyboard.write(KEY_TAB);
-    Keyboard.write(KEY_TAB);
-    Keyboard.print("Payable");         
-    delay(100);
-  }
-
-  if (digitalRead(pin3) == LOW)                     //Checking if the third switch has been pressed
-  {
-    Keyboard.print("PO: ");
+  if (digitalRead(pin2) == LOW)                   // Example of how to trigger keys that aren't alphanumeric                
+  {                    
     Keyboard.press(KEY_LEFT_CTRL);
-    Keyboard.print("v");
+    Keyboard.press(KEY_LEFT_ALT); 
+    Keyboard.press(KEY_ESCAPE);
     Keyboard.releaseAll();
-    Keyboard.write(KEY_RETURN);
-    Keyboard.print("Order #: ");
     delay(100);
   }
 
-  if (digitalRead(pin4) == LOW)                     //Checking if the fourth switch has been pressed
-  { 
-    Keyboard.print("Once it has been packed and handed over to the courier you will receive tracking info that you can use to keep an eye on your package.");
-  }
-
-  if (digitalRead(pin5) == LOW)                     //Checking if the fifth switch has been pressed
-  { 
-    Keyboard.print("Hi {{ticket.requester.first_name}}, ");
-    Keyboard.write(KEY_RETURN);
-    Keyboard.write(KEY_RETURN);
-    Keyboard.releaseAll();
-    Keyboard.print("Thanks for getting in touch, ");
-  }
-
-  if (digitalRead(pin6) == LOW)                     //Checking if the sixth switch has been pressed
-  { 
-    Keyboard.print("/catalog/product/view/sku/");
+  if (digitalRead(pin3) == LOW)                     // Example of how to combine the both in the same button press
+  {
     Keyboard.press(KEY_LEFT_CTRL);
-    Keyboard.print("v");
+    Keyboard.print("a");
+     Keyboard.press(KEY_LEFT_CTRL);
+    Keyboard.print("c");
     Keyboard.releaseAll();
+    delay(100);
   }
 
-  if (digitalRead(pin7) == LOW)                     //Checking if the seventh switch has been pressed
-  {
-    Keyboard.print("Was there anything else I can look into with you?");                            
-    delay(500);
-  }
+  //if (digitalRead(pin4) == LOW)                     
+  //{ 
+  // delay(100);
+  //}
 
-  if (digitalRead(pin8) == LOW)                     //Checking if the eigth switch has been pressed
-  {
-    Keyboard.print("One moment I'll have a quick look for you");                            
-    delay(500);
-  }
+  //if (digitalRead(pin5) == LOW)                     
+  //{ 
+  // delay(100);
+  //}
+
+  //if (digitalRead(pin6) == LOW)                     
+  //{ 
+  // delay(100);
+  //}
+
+  //if (digitalRead(pin7) == LOW)                    
+  //{
+  // delay(100);
+  //}
+
+  //if (digitalRead(pin8) == LOW)                     
+  //{
+  // delay(100);
+  //}
 }
